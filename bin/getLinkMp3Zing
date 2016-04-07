@@ -1,0 +1,3 @@
+require 'getLinkMp3Zing'
+tool = ToolGetLink.new("http://mp3.zing.vn/bai-hat/Tam-Su-Voi-Nguoi-La-Tien-Cookie/ZW7O6UDW.html")
+puts tool.getLinkDownload
