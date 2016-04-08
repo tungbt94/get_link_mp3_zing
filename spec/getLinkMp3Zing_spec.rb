@@ -3,8 +3,7 @@ require 'getLinkMp3Zing'
 RSpec.describe ToolGetLink do
   wLink = "http://mp3.zing.vn/bai-hatTam-Su-Voi-Nguoi-La-Tien-Cookie/ZW7O6UDW.html"
   rLink = "http://mp3.zing.vn/bai-hat/Tam-Su-Voi-Nguoi-La-Tien-Cookie/ZW7O6UDW.html"
-  xml0 = "http://mp3.zing.vn/xml/song-xml/ZncHtkHsQzWnihbyLDcTFHkm"
-  xml1 = "http://mp3.zing.vn/xml/song-xml/ZHcHTZGsQlpmuCDykbctbmkH"
+  xmlLink = "http://mp3.zing.vn/xml/song-xml/"
   dLink = "http://mp3.zing.vn/xml/load-song/MjAxNSUyRjEyJTJGMjQlMkY5JTJGYiUyRjliZDZkZDYyNTEwODdkMmNhNGEzNWMzNGM1NDM4ZWY5Lm1wMyU3QzEz"
 
   describe "#initialize" do
@@ -43,7 +42,7 @@ RSpec.describe ToolGetLink do
 
     context "@link = rightLink" do
       it "return link to a xml page" do
-        expect(ToolGetLink.new(rLink).getLinkToXMLPage).to eq(xml0).or(eq(xml1))
+        expect(ToolGetLink.new(rLink).getLinkToXMLPage.index(xmlLink)).to eq(0)
       end
     end
   end

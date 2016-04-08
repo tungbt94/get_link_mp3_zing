@@ -41,10 +41,3 @@ class ToolGetLink
     end
   end
 end
-
-# tool = ToolGetLink.new("http://mp3.zing.vn/bai-hat/Tam-Su-Voi-Nguoi-La-Tien-Cookie/ZW7O6UDW.html")
-# tool = ToolGetLink.new("http://mp3.zing.vn/bai-hatTam-Su-Voi-Nguoi-La-Tien-Cookie/ZW7O6UDW.html")
-# tool.checkLink("http://mp3.zing.vn/bai-hatTam-Su-Voi-Nguoi-La-Tien-Cookie/ZW7O6UDW.html")
-# puts tool.getLink
-tool = ToolGetLink.new("http://mp3.zing.vn/bai-hat/Tam-Su-Voi-Nguoi-La-Tien-Cookie/ZW7O6UDW.html")
-puts tool.getLinkDownload
